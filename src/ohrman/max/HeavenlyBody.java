@@ -49,6 +49,7 @@ public final class HeavenlyBody {
 
     // We generate the hashcode for bucket comparison by getting the strings hascode and adding a small
     // enough number to not cause trouble with the maximum size of Integer.MAX_VALUE
+    // needed for making sure equal objects has equal hashCode.
     @Override
     public int hashCode() {
         System.out.println("hashcode called");
