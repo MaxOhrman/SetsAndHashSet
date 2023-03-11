@@ -95,6 +95,21 @@ public class Main {
             System.out.println("\t" + moon.getName());
         }
 
+        // Sets can't hold duplicates. This however will be added because orbitalPeriod is different thus not equal
+        // Java uses the standard equals(Object obj) for comparing with the body "return (this == obj);"
+        HeavenlyBody pluto = new HeavenlyBody("Pluto", 842.0);
+        planets.add(pluto);
+
+        for(HeavenlyBody planet : planets) {
+            System.out.println("Planet name: " + planet.getName() + ", orbital period: " + planet.getOrbitalPeriod());
+        }
+
+
+        //String however overrides the equal method and implements its own comparison
+        Object o = new Object();
+        o.equals(o);
+        "pluto".equals("");
+
     }
 
 
