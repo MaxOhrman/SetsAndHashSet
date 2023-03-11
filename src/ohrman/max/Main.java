@@ -97,6 +97,8 @@ public class Main {
 
         // Sets can't hold duplicates. This however will be added because orbitalPeriod is different thus not equal
         // Java uses the standard equals(Object obj) for comparing with the body "return (this == obj);"
+        // We instead Override the equals method in HeavenlyBody and implement our own object.equals method
+        // that instead compare the String name to avoid duplicates
         HeavenlyBody pluto = new HeavenlyBody("Pluto", 842.0);
         planets.add(pluto);
 
